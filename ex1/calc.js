@@ -6,12 +6,12 @@
     /** ----------------------------------- **/
   };
 
-  let operand1 = document.getElementById('operand1').value;
-  let operator = document.getElementById('operator').value;
-  let operand2 = document.getElementById('operand2').value;
+  let operand1 = document.getElementById('operand1');
+  let operator = document.getElementById('operator');
+  let operand2 = document.getElementById('operand2');
 
   document.getElementById('button').addEventListener('click', () => {
-    let result = process(operand1, operator, operand2);
+    let result = process(operand1.value, operator.value, operand2.value);
     document.getElementById('result').innerHTML = result;
   });
 
