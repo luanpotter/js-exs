@@ -7,6 +7,7 @@ from ray_peewee.all import PeeweeModel
 from ray.wsgi.wsgi import application
 from ray.endpoint import endpoint
 from ray.actions import Action, action
+from bottle import static_file
 
 database = peewee.SqliteDatabase('example.db')
 
@@ -34,4 +35,8 @@ if __name__ == '__main__':
     database.create_tables([Post], safe=True)
     database.close()
     application.run(debug=True, reloader=True)
+
+@application.route('/static/<filepath:path>')
+def server_static(filepath):
+    return static_file(filepath, root='static')
 
