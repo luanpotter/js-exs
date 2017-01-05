@@ -1,24 +1,30 @@
 <!doctype html>
-
 <html lang="en">
-<head>
-  <meta charset="utf-8">
 
-  <title>Exercício 1 - Calculadora</title>
-  <meta name="description" content="Uma calculadora bem simples">
+<head>
+    <meta charset="utf-8">
+    <title>Exercício 1 - Calculadora</title>
+    <meta name="description" content="Uma calculadora bem simples">
+    <link rel="stylesheet" href="http://www.webdevjeffus.com/drop-in-css/drop-in.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <input type="text" id="operand1" />
-  <select id="operator">
-    <option value="+">+</option>
-    <option value="-">-</option>
-    <option value="*">*</option>
-    <option value="/">/</option>
-  </select>
-  <input type="text" id="operand2" />
-  <input type="button" id="button" value="Do it!" />
-  <div id="result"></div>
-  <script src="calc.js"></script>
+    <main>
+        <section>
+            <input type="text" id="operand1" />
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input type="text" id="operand2" />
+            <input type="button" id="button" value="Do it!" />
+            <div id="result"></div>
+            <script src="calc.js"></script>
+        </section>
+    </main>
 </body>
+
 </html>
